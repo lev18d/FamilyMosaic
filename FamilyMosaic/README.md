@@ -1,15 +1,4 @@
 # Family Mosaic Web Application
-
-_Write a brief overview of the app here._
-
-Primary developers:
-
-* _Tom Choi, Sam Banning, Wang Chong_
-
-Initial application idea provided by:
-
-* _Sam Diamantstein_
-
 # Development
 
 ### First-time setup
