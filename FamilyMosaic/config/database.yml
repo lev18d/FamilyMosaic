@@ -1,0 +1,32 @@
+development: &default
+  adapter: postgresql
+  encoding: unicode
+  database: ancestory_dev
+  host: localhost
+  port: <%= ENV["BOXEN_POSTGRESQL_PORT"] %>
+  username: postgres
+  password: postgres
+
+test:
+  <<: *default
+  host: <%= ENV["DB_HOST"] %>
+  port: <%= ENV["DB_PORT"] %>
+  database: mosaic_test
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+
+staging:
+  <<: *default
+  host: <%= ENV["DB_HOST"] %>
+  port: <%= ENV["DB_PORT"] %>
+  database: mosaic_staging
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+
+production:
+  <<: *default
+  host: <%= ENV["DB_HOST"] %>
+  port: <%= ENV["DB_PORT"] %>
+  database: mosaic_production
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
